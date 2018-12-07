@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Please do not manually edit this file-->
+<manifest>
+   <remote  name="sdm660"
+           fetch="ssh://git@github.com/xiaomi-sdm660/"/>
+
+<!-- BUILD MANIFEST -->
+	<project name="android_build_scripts" path="build/scripts" remote="sdm660" revision="cr-8.0" >
+	<linkfile src="buildxiaomi.sh" dest="buildxiaomi.sh" />
+	<linkfile src="buildxiaomi_kernel.sh" dest="buildxiaomi_kernel.sh" />
+	<linkfile src="sync.sh" dest="sync.sh" />
+	<linkfile src="buildmodule.sh" dest="buildmodule.sh" />
+	</project>
+
+<!-- XIAOMI MANIFEST -->
+  <!-- kernel -->
+	<project name="android_kernel_xiaomi_sdm660-common" path="kernel/xiaomi/sdm660" remote="sdm660" revision="master"/>
+
+  <!-- wayne -->
+	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="sdm660" revision="cr-8.0"/>
+
+  <!-- jasmine -->
+	<project name="android_device_xiaomi_jasmine_sprout" path="device/xiaomi/jasmine_sprout" remote="sdm660" revision="cr-8.0"/>
+
+  <!-- clover -->
+	<project name="android_device_xiaomi_clover" path="device/xiaomi/clover" remote="sdm660" revision="cr-8.0"/>
+
+  <!-- Common-->
+	<project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="sdm660" revision="cr-8.0"/>
+
+  <!-- vendor -->
+	<project name="android_vendor_xiaomi_clover" path="vendor/xiaomi/clover" remote="sdm660" revision="master"/>
+	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="sdm660" revision="master" />
+  <project name="android_vendor_xiaomi_sdm660-common" path="vendor/xiaomi/sdm660-common" remote="sdm660" revision="cr-8.0-eas" />
+
+  <project name="android_vendor_xiaomi_MiuiCamera" path="vendor/xiaomi/MiuiCamera" remote="sdm660" revision="master" />
+</manifest>

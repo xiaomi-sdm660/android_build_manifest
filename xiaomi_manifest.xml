@@ -46,4 +46,6 @@
 	<project name="android_vendor_xiaomi_clover" path="vendor/xiaomi/clover" remote="sdm660" revision="master" />
 	<project name="android_vendor_xiaomi_jasmine" path="vendor/xiaomi/jasmine" remote="sdm660" revision="master" />
 	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="sdm660" revision="master" />
+	
+	<project name="android_vendor_xiaomi_Miuicamera" path="vendor/xiaomi/Miuicamera" remote="sdm660" revision="master" />
 </manifest>

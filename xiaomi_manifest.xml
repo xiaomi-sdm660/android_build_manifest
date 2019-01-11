@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Please do not manually edit this file-->
-<manifest>         
-	<remote  name="carbonrom"
-           fetch="https://github.com/CarbonROM/"/>
-           
+<manifest>
    <remote  name="lineageos"
            fetch="https://github.com/LineageOS/"/>
-                      
+
    <remote  name="sdm660"
-           fetch="https://github.com/xiaomi-sdm660/"/>
+           fetch="ssh://git@github.com/xiaomi-sdm660/"/>
 
-    <remote  name="rcstar6696"
-           fetch="https://github.com/rcstar6696/"/>
-           
-     <remote  name="omni"
-           fetch="https://github.com/omnirom/"/>
+<!-- BUILD MANIFEST -->
 
-<!-- BUILD MANIFEST -->  
-           
 	<project name="android_build_manifest" path="repo/local_manifest" remote="sdm660" revision="havoc_xiaomi" >
 	<linkfile src="xiaomi_manifest.xml" dest="repo/local_manifest/local_manifest.xml"/>
 	</project>
-	
+
 	<project name="android_build_scripts" path="build/scripts" remote="sdm660" revision="havoc" >
 	<linkfile src="buildxiaomi.sh" dest="buildxiaomi.sh" />
 	<linkfile src="buildxiaomi_kernel.sh" dest="buildxiaomi_kernel.sh" />
@@ -29,30 +20,30 @@
 	<linkfile src="audit_alow.sh" dest="audit_alow.sh" />
 	<linkfile src="buildmodule.sh" dest="buildmodule.sh" />
 	</project>
-	
-<!-- BUILD MANIFEST -->        
+
+<!-- BUILD MANIFEST -->
 
 
 <!-- XIAOMI MANIFEST -->
 
   <!-- kernel -->
-	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="sdm660" revision="cr-7.0"/>
-	<project name="android_kernel_xiaomi_clover" path="kernel/xiaomi/clover" remote="sdm660" revision="cr-7.0"/>
+	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="sdm660" revision="master"/>
+	<project name="android_kernel_xiaomi_clover" path="kernel/xiaomi/clover" remote="sdm660" revision="master"/>
 
   <!-- clover -->
 	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="sdm660" revision="havoc"/>
-	
+
   <!-- jasmine-->
 	<project name="android_device_xiaomi_jasmine" path="device/xiaomi/jasmine" remote="sdm660" revision="havoc"/>
-  
+
   <!-- wayne-->
 	<project name="android_device_xiaomi_clover" path="device/xiaomi/clover" remote="sdm660" revision="havoc"/>
 
   <!-- Common-->
 	<project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="sdm660" revision="havoc"/>
-	
-  <!-- vendor -->	
-	<project name="android_vendor_xiaomi_clover" path="vendor/xiaomi/clover" remote="sdm660" revision="havoc" />
-	<project name="android_vendor_xiaomi_jasmine" path="vendor/xiaomi/jasmine" remote="sdm660" revision="havoc" />	
-	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="sdm660" revision="havoc" />
+
+  <!-- vendor -->
+	<project name="android_vendor_xiaomi_clover" path="vendor/xiaomi/clover" remote="sdm660" revision="master" />
+	<project name="android_vendor_xiaomi_jasmine" path="vendor/xiaomi/jasmine" remote="sdm660" revision="master" />
+	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="sdm660" revision="master" />
 </manifest>

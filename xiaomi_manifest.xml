@@ -30,16 +30,16 @@
 	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="sdm660" revision="master"/>
 	<project name="android_kernel_xiaomi_clover" path="kernel/xiaomi/clover" remote="sdm660" revision="master"/>
 
-  <!-- clover -->
+  <!-- wayne -->
 	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="sdm660" revision="havoc"/>
 
-  <!-- jasmine-->
+  <!-- jasmine -->
 	<project name="android_device_xiaomi_jasmine" path="device/xiaomi/jasmine" remote="sdm660" revision="havoc"/>
 
-  <!-- wayne-->
+  <!-- clover -->
 	<project name="android_device_xiaomi_clover" path="device/xiaomi/clover" remote="sdm660" revision="havoc"/>
 
-  <!-- Common-->
+  <!-- Common -->
 	<project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="sdm660" revision="havoc"/>
 
   <!-- vendor -->
@@ -47,5 +47,5 @@
 	<project name="android_vendor_xiaomi_jasmine" path="vendor/xiaomi/jasmine" remote="sdm660" revision="master" />
 	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="sdm660" revision="master" />
 	
-	<project name="android_vendor_xiaomi_Miuicamera" path="vendor/xiaomi/Miuicamera" remote="sdm660" revision="master" />
+	<project name="android_vendor_xiaomi_Miuicamera" path="vendor/xiaomi/MiuiCamera" remote="sdm660" revision="master" />
 </manifest>

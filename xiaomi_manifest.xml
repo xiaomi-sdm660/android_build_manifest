@@ -30,8 +30,8 @@
 
   <!-- vendor -->
 	<project name="android_vendor_xiaomi_clover" path="vendor/xiaomi/clover" remote="sdm660" revision="master"/>
-	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="sdm660" revision="master" />
-  <project name="android_vendor_xiaomi_sdm660-common" path="vendor/xiaomi/sdm660-common" remote="sdm660" revision="cr-8.0-eas" />
+	<project name="android_vendor_xiaomi_wayne-common" path="vendor/xiaomi/wayne-common" remote="sdm660" revision="master" />
+  <project name="android_vendor_xiaomi_sdm660-common" path="vendor/xiaomi/sdm660-common" remote="sdm660" revision="cr-8.0-hmp" />
 
   <project name="android_vendor_xiaomi_MiuiCamera" path="vendor/xiaomi/MiuiCamera" remote="sdm660" revision="master" />
 </manifest>

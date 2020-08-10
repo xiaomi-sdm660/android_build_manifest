@@ -14,7 +14,7 @@
 
 <!-- XIAOMI MANIFEST -->
   <!-- kernel -->
-	<project name="android_kernel_xiaomi_sdm660-common" path="kernel/xiaomi/sdm660" remote="sdm660" revision="master"/>
+	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="sdm660" revision="master"/>
 
   <!-- wayne -->
 	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="sdm660" revision="cr-8.0"/>

@@ -24,7 +24,7 @@
 		<!-- wayne -->
 		<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="sdm660" revision="11" />
 		<!-- wayne-Common-->
-		<project name="android_device_xiaomi_wayne-common" path="device/xiaomi/sdm660-common" remote="sdm660" revision="11"/>
+		<project name="android_device_xiaomi_wayne-common" path="device/xiaomi/wayne-common" remote="sdm660" revision="11"/>
 		<!-- sdm660-Common-->
 		<project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="sdm660" revision="11"/>
   

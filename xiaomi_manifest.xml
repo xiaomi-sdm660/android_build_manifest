@@ -11,61 +11,64 @@
            fetch="https://github.com/" />
 
 	<!--// BUILD SCRIPTS //-->
-	<project name="android_build_scripts" path="build/scripts" remote="sdm660" revision="11" >
-	<linkfile src="make_jasmine_sprout.sh" dest="jasmine.sh" />
-	<linkfile src="make_wayne.sh" dest="wayne.sh" />
-	<linkfile src="make_kernel.sh" dest="kernel.sh" />
-	<linkfile src="sync.sh" dest="sync.sh" />
-	</project>
+    <project name="android_build_scripts" path="build/scripts" remote="sdm660" revision="11" >
+        <linkfile src="make_jasmine_sprout.sh" dest="jasmine.sh" />
+        <linkfile src="make_wayne.sh" dest="wayne.sh" />
+        <linkfile src="make_kernel.sh" dest="kernel.sh" />
+        <linkfile src="sync.sh" dest="sync.sh" />
+    </project>
   
 	<!--// Device tree //-->
-		<!-- jasmine -->
-		<project name="android_device_xiaomi_jasmine_sprout" path="device/xiaomi/jasmine_sprout" remote="sdm660" revision="11"/>
-		<!-- wayne -->
-		<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="sdm660" revision="11" />
-		<!-- wayne-Common-->
-		<project name="android_device_xiaomi_wayne-common" path="device/xiaomi/wayne-common" remote="sdm660" revision="11"/>
-		<!-- sdm660-Common-->
-		<project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="sdm660" revision="11"/>
+	<!-- jasmine -->
+    <project name="android_device_xiaomi_jasmine_sprout" path="device/xiaomi/jasmine_sprout" remote="sdm660" revision="11"/>
+	<!-- wayne -->
+    <project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="sdm660" revision="11" />
+	<!-- wayne-Common-->
+    <project name="android_device_xiaomi_wayne-common" path="device/xiaomi/wayne-common" remote="sdm660" revision="11"/>
+	<!-- sdm660-Common-->
+    <project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="sdm660" revision="11"/>
   
 	<!--// Kernel //-->
-		<project name="halcyon_kernel_sdm660" path="kernel/xiaomi/sdm660" remote="OdSazib" revision="eas" />
+    <project name="halcyon_kernel_sdm660" path="kernel/xiaomi/sdm660" remote="OdSazib" revision="eas" />
   
 	<!--// Vendor //-->
-		<!-- sdm660-common -->
-		<project name="android_vendor_xiaomi_sdm660-common" path="vendor/xiaomi/sdm660-common" remote="sdm660" revision="11"/>
-		<!-- wayne-common -->
-		<project name="android_vendor_xiaomi_wayne-common" path="vendor/xiaomi/wayne-common" remote="sdm660" revision="11" />
-		<!--MiuiCamera-->
-		<project name="android_vendor_xiaomi_MiuiCamera" path="vendor/xiaomi/MiuiCamera" remote="sdm660" revision="master" clone-depth="1" />
+	<!-- sdm660-common -->
+    <project name="android_vendor_xiaomi_sdm660-common" path="vendor/xiaomi/sdm660-common" remote="sdm660" revision="11"/>
+	<!-- wayne-common -->
+    <project name="android_vendor_xiaomi_wayne-common" path="vendor/xiaomi/wayne-common" remote="sdm660" revision="11" />
+	<!--MiuiCamera-->
+    <project name="android_vendor_xiaomi_MiuiCamera" path="vendor/xiaomi/MiuiCamera" remote="sdm660" revision="master" clone-depth="1" />
         
 	<!--// Prebuilt TWRP //-->
-		<project name="android_recovery_twrp" path="recovery/twrp/xiaomi/jasmine_sprout" remote="sdm660" revision="jasmine_sprout"/>
+    <project name="android_recovery_twrp" path="recovery/twrp/xiaomi/jasmine_sprout" remote="sdm660" revision="jasmine_sprout"/>
         
-	<!-- Extract-Util -->
-		<project path="tools/extract-utils" name="AOSPA/android_tools_extract-utils" remote="git" revision="ruby" />
+	<!--// Extract-Util //-->
+    <project path="tools/extract-utils" name="AOSPA/android_tools_extract-utils" remote="git" revision="ruby" />
         
-	<!-- HALs -->
-		<!--Remove existing HAL-->
-		<remove-project name="android_hardware_qcom_display" path="hardware/qcom-caf/msm8998/display" />
-		<remove-project name="android_hardware_qcom_audio"  path="hardware/qcom-caf/msm8998/audio"/>
-		<remove-project name="android_hardware_qcom_media" path="hardware/qcom-caf/msm8998/media" />
-		<!--Clone new HAL-->
-		<project path="hardware/qcom-caf/msm8998/display" name="AOSP-11/hardware_qcom-caf_display_msm8998" groups="pdk-qcom,qcom,qcom_display" remote="git" revision="11" />
-		<project path="hardware/qcom-caf/msm8998/media" name="AOSP-11/hardware_qcom-caf_media_msm8998" groups="qcom,pdk-qcom" remote="git" revision="11" />
-		<project path="hardware/qcom-caf/msm8998/audio" name="AOSP-11/hardware_qcom-caf_audio_msm8998" groups="qcom,pdk-qcom" remote="git" revision="11" />
+	<!--// HALs //-->
+	<!--Remove existing HAL-->
+    <remove-project name="android_hardware_qcom_display" path="hardware/qcom-caf/msm8998/display" />
+    <remove-project name="android_hardware_qcom_audio"  path="hardware/qcom-caf/msm8998/audio"/>
+    <remove-project name="android_hardware_qcom_media" path="hardware/qcom-caf/msm8998/media" />
+	<!--Clone new HAL-->
+    <project path="hardware/qcom-caf/msm8998/display" name="AOSP-11/hardware_qcom-caf_display_msm8998" groups="pdk-qcom,qcom,qcom_display" remote="git" revision="11" />
+    <project path="hardware/qcom-caf/msm8998/media" name="AOSP-11/hardware_qcom-caf_media_msm8998" groups="qcom,pdk-qcom" remote="git" revision="11" />
+    <project path="hardware/qcom-caf/msm8998/audio" name="AOSP-11/hardware_qcom-caf_audio_msm8998" groups="qcom,pdk-qcom" remote="git" revision="11" />
 
-	<!-- CAF Telephony -->
-		<!--Remove existing repo-->
-		<remove-project name="android_vendor_codeaurora_telephony" path="vendor/codeaurora/telephony" />
-		<!--Clone new repo-->
-		<project name="android_vendor_codeaurora_telephony" path="vendor/codeaurora/telephony" remote="OdSazib" revision="11-qssi" />
+	<!--// CAF Telephony //-->
+	<!--Remove existing repo-->
+    <remove-project name="android_vendor_codeaurora_telephony" path="vendor/codeaurora/telephony" />
+	<!--Clone new repo-->
+    <project name="android_vendor_codeaurora_telephony" path="vendor/codeaurora/telephony" remote="OdSazib" revision="11-qssi" />
 
-	<!--WLAN-->
-		<!--Remove existing repo-->
-		<remove-project name="android_hardware_qcom_wlan" />
-		<!--Clone new repo-->
-		<project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" remote="OdSazib" revision="11" />
+	<!--// WLAN //-->
+	<!--Remove existing repo-->
+    <remove-project name="android_hardware_qcom_wlan" />
+	<!--Clone new repo-->
+    <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" remote="OdSazib" revision="11" />
 
+	<!--// Dirac //-->
+    <project path="vendor/xiaomi/dirac" name="xiaomi-sdm660/vendor_xiaomi_dirac" remote="git" revision="11" />
+  
 </manifest>
 
